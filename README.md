@@ -1,4 +1,5 @@
 # shop2
+github修改，然后 git pull
 
 ## Project setup
 ```
