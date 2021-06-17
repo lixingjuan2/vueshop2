@@ -117,14 +117,23 @@ import BScroll from 'better-scroll'
     // 组件创建后调用 是错的
     mounted(){
       this.scroll =  new BScroll(document.querySelector('.wrapper'), {
-
+        probeType: 3,
+        pullUpLoad: true
       })
+
+      this.scroll.on('scroll', (position)=>{
+        console.log(position);
+      })
+
+      // this.scroll.on('pulling', ()=>{
+      //   console.log('上拉加载更多');
+      // })
       
     }
   }
 </script>
 
-<style>
+<style scoped>
 .wrapper{
   height: 150px;
   width: 100px;
